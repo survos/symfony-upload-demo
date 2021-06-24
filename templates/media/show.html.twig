@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Admin View of Media {{ media.id }}</h1>
+    {{ media.type }}
+
+{{ dump(media) }}
+{% endblock %}

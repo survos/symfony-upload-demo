@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}s3 buckets{% endblock %}
+
+{% block body %}
+
+    <b>{{ root }}</b>
+
+    <ol>
+        {% for bucket in buckets %}
+            <li>
+                <a href="{{ path('s3_bucket', {name: bucket.Name}) }}">
+                    {{ bucket.Name }}
+                </a>
+            </li>
+        {% endfor %}
+
+    </ol>
+{% endblock %}
